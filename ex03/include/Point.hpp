@@ -6,7 +6,7 @@
 /*   By: arobu <arobu@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:21:30 by arobu             #+#    #+#             */
-/*   Updated: 2023/06/26 15:56:46 by arobu            ###   ########.fr       */
+/*   Updated: 2023/06/30 13:48:49 by arobu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Point{
 			Point(void);
 			~Point(void);
 			Point(Point const &copy);
-			Point	&operator=(Point const &copy);
+			Point	&operator=(Point &copy);
 			
 			// Getters
 			Fixed	getX() const;

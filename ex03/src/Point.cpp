@@ -6,11 +6,12 @@
 /*   By: arobu <arobu@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/26 14:24:55 by arobu             #+#    #+#             */
-/*   Updated: 2023/06/26 15:45:23 by arobu            ###   ########.fr       */
+/*   Updated: 2023/06/30 13:48:41 by arobu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
+#include <iostream>
 
 Point::Point(void): _x(0), _y(0){}
 
@@ -28,8 +29,8 @@ Point::~Point(void){}
 
 Point::Point(Point const &copy): _x(copy._x), _y(copy._y){}
 
-Point	&Point::operator=(Point const &copy){
-	return (*this);
+Point	&Point::operator=(Point &copy){
+	return (copy);
 }
 
 Fixed	Point::getX(void) const{

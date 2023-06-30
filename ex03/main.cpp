@@ -6,7 +6,7 @@
 /*   By: arobu <arobu@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 15:32:27 by arobu             #+#    #+#             */
-/*   Updated: 2023/06/26 16:13:07 by arobu            ###   ########.fr       */
+/*   Updated: 2023/06/30 13:49:47 by arobu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int main(int argc, char **argv)
     Point b2(10.0f, 30.0f);
     Point c2(20.0f, 0.0f);
     Point p2(30.0f, 15.0f);
+
     bool result2 = bsp(a2, b2, c2, p2);
     std::cout << "Test Case 2: ";
     if (result2) {
@@ -45,6 +46,10 @@ int main(int argc, char **argv)
     } else {
         std::cout << "Point is outside the triangle." << std::endl;
     }
-
+	// Assignment operator
+	Point test = a2;
+	std::cout << test.getX() << " " << test.getY() << std::endl;
+	Point test2 = b2;
+	std::cout << test2.getX() << " " << test2.getY() << std::endl;
 	return (0);
 }
